@@ -55,5 +55,7 @@ class newrelic_plugins::params {
   $varnish_version = '2.0.0'
   $varnish_download_baseurl = 'https://github.com/threelegs/newrelic-plugins/blob/master/dist'
   $varnish_java_options = '-Xmx128m'
+  
+  $redis_version = '1.0.1'
+  $redis_download_baseurl ='https://github.com/kenjij/newrelic_redis_plugin/archive'
 }
-
