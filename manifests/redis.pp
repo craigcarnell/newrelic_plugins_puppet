@@ -72,7 +72,7 @@ class newrelic_plugins::redis (
 
   # install dante gem as a requirement
   package { 'dante' :
-    ensure   => '2.0.0',
+    ensure   => '0.2.0',
     provider => gem
   }
 
