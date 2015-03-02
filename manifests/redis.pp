@@ -75,6 +75,12 @@ class newrelic_plugins::redis (
     ensure   => '0.2.0',
     provider => gem
   }
+  
+  # install bundler gem as a requirement
+  package { 'bundler' :
+    ensure   => present,
+    provider => gem
+  }
 
   $plugin_path = "${install_path}/newrelic_redis_plugin"
 
@@ -122,6 +128,8 @@ class newrelic_plugins::redis (
   Newrelic_plugins::Resource::Verify_ruby['Redis Plugin']
   ->
   Newrelic_plugins::Resource::Verify_license_key['Redis Plugin: Verify New Relic License Key']
+  ->
+  Package['bundler']
   ->
   Package['dante']
   ->
