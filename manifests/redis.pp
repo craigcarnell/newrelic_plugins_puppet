@@ -123,9 +123,11 @@ class newrelic_plugins::redis (
   ->
   Newrelic_plugins::Resource::Verify_license_key['Redis Plugin: Verify New Relic License Key']
   ->
-  Package['newrelic_redis_plugin']
+  Package['dante']
   ->
   Exec['create install directory']
+  ->
+  Newrelic_plugins::Resource::Install_plugin['newrelic_redis_plugin']
   ->
   File["${plugin_path}/config"]
   ->
