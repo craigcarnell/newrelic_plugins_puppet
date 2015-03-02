@@ -43,7 +43,7 @@
 #     ]
 #   }
 #
-class newrelic_plugins::f5 (
+class newrelic_plugins::redis (
     $license_key,
     $install_path,
     $user,
